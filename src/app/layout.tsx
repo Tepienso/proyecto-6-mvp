@@ -1,9 +1,21 @@
 import React from "react";
+import { Poppins } from "next/font/google";
+import "./globals.css";
+import "./custom.css";
+
+
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "700"], // podés elegir variantes
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body className={poppins.className}>
+        {children}
+      </body>
     </html>
   );
 }
