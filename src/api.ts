@@ -1,10 +1,16 @@
 // src/api.ts
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api";
 
 export async function fetchProfile() {
-  const res = await fetch(`${API_URL}/profile`);
-  if (!res.ok) {
-    throw new Error(`Error ${res.status}: ${res.statusText}`);
+  try {
+    // Ruta relativa: funciona en local y en producción
+    const res = await fetch("/api/profile");
+
+    if (!res.ok) {
+      throw new Error(`Error ${res.status}: ${res.statusText}`);
+    }
+
+    return res.json();
+  } catch (err: any) {
+    throw new Error(err.message || "Error desconocido al obtener perfil");
   }
-  return res.json();
 }
