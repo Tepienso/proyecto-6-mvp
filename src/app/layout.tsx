@@ -9,6 +9,11 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "700"], // podés elegir variantes
 });
+export const metadata = {
+  title: "UVAS",
+  description: "Gestión de pedidos y clientes para vendedoras de cosméticos",
+};
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

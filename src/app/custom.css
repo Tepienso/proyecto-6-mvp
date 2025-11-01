@@ -1,71 +1,78 @@
-/* ===== Colores base ===== */
-.text-primary { color: #1d4ed8; }   /* azul */
-.text-secondary { color: #9333ea; } /* violeta */
-.text-success { color: #059669; }   /* verde */
-.text-danger { color: #dc2626; }    /* rojo */
-.text-warning { color: #d97706; }   /* naranja */
-.text-muted { color: #6b7280; }     /* gris */
+/* ===== Utilidades base ===== */
+/* ... aquí todo lo que ya tenías definido ... */
 
-.bg-primary { background-color: #1d4ed8; }
-.bg-secondary { background-color: #9333ea; }
-.bg-success { background-color: #059669; }
-.bg-danger { background-color: #dc2626; }
-.bg-warning { background-color: #d97706; }
-.bg-light { background-color: #f3f4f6; }
-.bg-dark { background-color: #111827; }
-
-/* ===== Tipografía ===== */
-.text-sm { font-size: 0.875rem; }
-.text-base { font-size: 1rem; }
-.text-lg { font-size: 1.125rem; }
-.text-xl { font-size: 1.25rem; }
-.text-2xl { font-size: 1.5rem; }
-.text-3xl { font-size: 1.875rem; }
-
-.font-light { font-weight: 300; }
-.font-normal { font-weight: 400; }
-.font-bold { font-weight: 700; }
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
-.underline { text-decoration: underline; }
-
-/* ===== Espaciado ===== */
-.m-0 { margin: 0; }
-.mt-4 { margin-top: 1rem; }
-.mb-4 { margin-bottom: 1rem; }
-.mb-6 { margin-bottom: 1.5rem; }
-.p-2 { padding: 0.5rem; }
-.p-4 { padding: 1rem; }
-.p-6 { padding: 1.5rem; }
-
-/* ===== Layout ===== */
-.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-.max-w-sm { max-width: 24rem; }
-.max-w-md { max-width: 28rem; }
-.max-w-lg { max-width: 32rem; }
-
-.flex { display: flex; }
-.flex-col { flex-direction: column; }
-.flex-row { flex-direction: row; }
-.items-center { align-items: center; }
-.justify-center { justify-content: center; }
-.justify-between { justify-content: space-between; }
-
-/* ===== Bordes ===== */
-.rounded { border-radius: 0.25rem; }
-.rounded-md { border-radius: 0.375rem; }
-.rounded-lg { border-radius: 0.5rem; }
-.border { border: 1px solid #d1d5db; }
-.border-0 { border: 0; }
-/* Centrado horizontal simple para contenedores */
-.center {
-  display: flex;
-  justify-content: center;
-}
-.center-vh {
-  min-height: 60vh;
+/* ===== Utilidades de layout y centrado (universales) ===== */
+.center-screen {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100vh; /* ocupa toda la altura de la pantalla */
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack-gap-sm > * + * { margin-top: 0.5rem; }
+.stack-gap-md > * + * { margin-top: 1rem; }
+.stack-gap-lg > * + * { margin-top: 1.5rem; }
+
+.text-center { text-align: center; }
+
+/* ===== Identidad UVAS ===== */
+:root {
+  --uva-violeta: #9333ea;
+  --uva-verde: #059669;
+  --uva-blanco: #ffffff;
+  --uva-gris: #6b7280;
+}
+
+.logo-uvas {
+  font-family: 'Poppins', 'Nunito', sans-serif;
+  font-weight: 700;
+  color: var(--uva-violeta);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ===== Botones principales ===== */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--uva-violeta);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #7e22ce;
+}
+
+.btn-secondary {
+  background-color: var(--uva-verde);
+  color: #fff;
+}
+
+/* ===== Contenedores de página ===== */
+.page {
+  background-color: var(--uva-blanco);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
 }
