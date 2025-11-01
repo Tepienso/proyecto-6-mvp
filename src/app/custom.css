@@ -1,12 +1,17 @@
-/* ===== Utilidades base ===== */
-/* ... aquí todo lo que ya tenías definido ... */
+/* =========================================================
+   UTILIDADES BASE (reset, helpers neutrales)
+   ========================================================= */
+/* Aquí irían resets globales o utilidades mínimas comunes
+   Ejemplo: box-sizing, tipografía base, etc. */
 
-/* ===== Utilidades de layout y centrado (universales) ===== */
+/* =========================================================
+   UTILIDADES DE LAYOUT Y CENTRADO (universales)
+   ========================================================= */
 .center-screen {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* ocupa toda la altura de la pantalla */
+  min-height: 100vh;
 }
 
 .stack {
@@ -20,13 +25,42 @@
 
 .text-center { text-align: center; }
 
-/* ===== Identidad UVAS ===== */
-:root {
-  --uva-violeta: #9333ea;
-  --uva-verde: #059669;
-  --uva-blanco: #ffffff;
-  --uva-gris: #6b7280;
+/* =========================================================
+   FORM ELEMENTS (inputs, formularios neutrales)
+   ========================================================= */
+.input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 1rem;
 }
+.input:focus {
+  outline: none;
+  border-color: var(--uva-violeta);
+  box-shadow: 0 0 0 2px rgba(147, 51, 234, 0.3);
+}
+
+/* =========================================================
+   IDENTIDAD UVAS (colores, logo, tipografía)
+   ========================================================= */
+
+:root {
+  --uva-violeta: #31045c;
+  --uva-verde: #0e7e2a;
+  --uva-blanco: #ffffff;
+  --uva-gris: #7e6788;
+}
+
+.logo-uvas-hero {
+  font-family: 'Poppins', 'Nunito', sans-serif;
+  font-weight: 700;
+  color: var(--uva-violeta);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 3rem; /* mucho más grande */
+}
+
 
 .logo-uvas {
   font-family: 'Poppins', 'Nunito', sans-serif;
@@ -36,7 +70,9 @@
   letter-spacing: 2px;
 }
 
-/* ===== Botones principales ===== */
+/* =========================================================
+   COMPONENTES (botones, tarjetas, contenedores)
+   ========================================================= */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -52,7 +88,6 @@
   background-color: var(--uva-violeta);
   color: #fff;
 }
-
 .btn-primary:hover {
   background-color: #7e22ce;
 }
@@ -62,7 +97,6 @@
   color: #fff;
 }
 
-/* ===== Contenedores de página ===== */
 .page {
   background-color: var(--uva-blanco);
   min-height: 100vh;
