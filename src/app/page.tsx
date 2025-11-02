@@ -11,7 +11,7 @@ export default function Home() {
           <div className="logo-uvas-hero">UVAS</div>
         </div>
 
-        <p>Bienvenida, Cynthia 👋</p>
+        <p>¡Bienvenida, Cynthia ! 👋</p>
 
         <Link href="/pedidos" className="btn btn-primary">
           Registrar pedido 🛒
