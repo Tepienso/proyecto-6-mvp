@@ -61,7 +61,6 @@
   font-size: 3rem; /* mucho más grande */
 }
 
-
 .logo-uvas {
   font-family: 'Poppins', 'Nunito', sans-serif;
   font-weight: 700;
@@ -73,40 +72,152 @@
 /* =========================================================
    COMPONENTES (botones, tarjetas, contenedores)
    ========================================================= */
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
 
-.btn-primary {
-  background-color: var(--uva-violeta);
-  color: #fff;
-}
-.btn-primary:hover {
-  background-color: #7e22ce;
-}
-
-.btn-secondary {
-  background-color: var(--uva-verde);
-  color: #fff;
-}
-
+/* Fondo general suave */
 .page {
-  background-color: var(--uva-blanco);
+  background-color: #fdf6ff; /* lavanda muy claro */
   min-height: 100vh;
   padding: 2rem;
 }
 
+/* Encabezado uva */
+.header-uvas {
+  background-color: #d1c4e9; /* violeta pastel */
+  color: #ffffff;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Poppins', 'Nunito', sans-serif;
+}
+
+/* Botón base pastel */
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.2s, transform 0.1s;
+}
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* Botones UVAS pastel */
+.btn-success {
+  background-color: #a8e6cf;
+  color: #2e7d32;
+}
+.btn-success:hover {
+  background-color: #81d4a3;
+}
+
+.btn-secondary {
+  background-color: #ff8b94;
+  color: #b71c1c;
+}
+.btn-secondary:hover {
+  background-color: #ff6f61;
+}
+
+.btn-volver {
+  background-color: #d1c4e9;
+  color: #4a148c;
+}
+.btn-volver:hover {
+  background-color: #b39ddb;
+}
+
+/* Tarjetas con borde pastel */
 .card {
-  background-color: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.5rem;
+  background-color: #ffffff;
+  border: 1px solid #e0d7ec; /* borde violeta claro */
+  border-radius: 0.75rem;
   padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   margin-bottom: 1rem;
+}
+
+/* Tabla UVAS con estética pastel */
+.table-uvas th {
+  background-color: #f3e5f5;
+  color: #4a148c;
+  font-weight: 600;
+}
+.table-uvas td {
+  background-color: #fafafa;
+  color: #333;
+}
+.table-uvas th, .table-uvas td {
+  border: 1px solid #e0d7ec;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* Pantallas pequeñas (celulares) */
+@media (max-width: 600px) {
+  .table-uvas th, .table-uvas td {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .table-uvas {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+.logo-title-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px; /* mismo ancho que los botones */
+}
+
+.welcome-text {
+  font-size: 1.5rem;       /* más grande */
+  color: var(--uva-violeta); /* color UVAS */
+  font-weight: 600;
+  margin-top: 1rem;
+}
+/* === Ajustes Home UVAS === */
+.home-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px; /* ancho uniforme para logo+título, bienvenida y botones */
+  margin: 0 auto;
+}
+
+.logo-title-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-text {
+  font-size: 1.5rem;
+  color: var(--uva-violeta);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+/* === Botones Home UVAS === */
+.home-block .btn {
+  width: 220px;       /* mismo ancho que logo+título */
+  text-align: center; /* centramos el texto dentro */
 }
