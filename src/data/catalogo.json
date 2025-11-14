@@ -1,0 +1,18 @@
+[
+  {
+    "codigo": "FITOBIO50",
+    "nombre": "FITOBIOLOGICA X 50 ML",
+    "precioDistribuidor": 10300,
+    "precioPublico": 14000,
+    "imagen": "/images/fitobiologica50.jpg",
+    "descripcion": "Suaviza y nutre la piel con extractos naturales."
+  },
+  {
+    "codigo": "MIA50",
+    "nombre": "MIA NUTRITIVA E HIDRATA 50 ML",
+    "precioDistribuidor": 10500,
+    "precioPublico": 14500,
+    "imagen": "/images/mia50.jpg",
+    "descripcion": "Crema nutritiva e hidratante para uso diario."
+  }
+]

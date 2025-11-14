@@ -11,7 +11,7 @@ type Cliente = {
   guardado: boolean;
 };
 
-export default function Clientes() {
+export default function ClientesPage() {
   const [clientes, setClientes] = useState<Cliente[]>([
     {
       id: Date.now(),
@@ -23,14 +23,11 @@ export default function Clientes() {
     },
   ]);
 
-  // 👉 Al cargar la página, traer clientes del backend (CSV)
   useEffect(() => {
     const fetchClientes = async () => {
       try {
         const res = await fetch("/api/clientes");
         const data = await res.json();
-
-        // aseguramos que sea array
         const lista = Array.isArray(data) ? data : [];
 
         const clientesConId = lista.map((c: any, index: number) => ({
@@ -52,7 +49,6 @@ export default function Clientes() {
         ]);
       } catch (error) {
         console.error("Error cargando clientes:", error);
-        // si falla, dejamos al menos un renglón vacío
         setClientes([
           {
             id: Date.now(),
@@ -84,12 +80,7 @@ export default function Clientes() {
       await fetch("/api/clientes", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          nombre: cliente.nombre,
-          apellido: cliente.apellido,
-          celular: cliente.celular,
-          email: cliente.email,
-        }),
+        body: JSON.stringify(cliente),
       });
     }
 
@@ -130,63 +121,87 @@ export default function Clientes() {
   };
 
   return (
-    <div className="page">
-      <h1>Gestión de Clientes</h1>
-      <table className="tabla-clientes">
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Celular</th>
-            <th>Email</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          {clientes.map((c) => (
-            <tr key={c.id}>
-              <td>
-                <input
-                  value={c.nombre}
-                  onChange={(e) => handleChange(c.id, "nombre", e.target.value)}
-                />
-              </td>
-              <td>
-                <input
-                  value={c.apellido}
-                  onChange={(e) =>
-                    handleChange(c.id, "apellido", e.target.value)
-                  }
-                />
-              </td>
-              <td>
-                <input
-                  value={c.celular}
-                  onChange={(e) =>
-                    handleChange(c.id, "celular", e.target.value)
-                  }
-                />
-              </td>
-              <td>
-                <input
-                  value={c.email}
-                  onChange={(e) => handleChange(c.id, "email", e.target.value)}
-                />
-              </td>
-              <td>
-                {!c.guardado ? (
-                  <button onClick={() => handleGuardar(c.id)}>Guardar</button>
-                ) : (
-                  <>
-                    <button onClick={() => handleEditar(c.id)}>Editar</button>
-                    <button onClick={() => handleEliminar(c.id)}>Eliminar</button>
-                  </>
-                )}
-              </td>
+    <div className="page center-screen text-center">
+      <div className="home-block stack stack-gap-md">
+        {/* Título eliminado: ahora se muestra en el banner superior */}
+        <table className="tabla-clientes">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Celular</th>
+              <th>Email</th>
+              <th>Acciones</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {clientes.map((c) => (
+              <tr key={c.id}>
+                <td>
+                  <input
+                    className="input-uvas"
+                    value={c.nombre}
+                    onChange={(e) => handleChange(c.id, "nombre", e.target.value)}
+                  />
+                </td>
+                <td>
+                  <input
+                    className="input-uvas"
+                    value={c.apellido}
+                    onChange={(e) =>
+                      handleChange(c.id, "apellido", e.target.value)
+                    }
+                  />
+                </td>
+                <td>
+                  <input
+                    className="input-uvas"
+                    value={c.celular}
+                    onChange={(e) =>
+                      handleChange(c.id, "celular", e.target.value)
+                    }
+                  />
+                </td>
+                <td>
+                  <input
+                    className="input-uvas"
+                    value={c.email}
+                    onChange={(e) => handleChange(c.id, "email", e.target.value)}
+                  />
+                </td>
+                <td>
+                  <div className="acciones">
+                    {!c.guardado ? (
+                      <button
+                        className="btn-uvas"
+                        onClick={() => handleGuardar(c.id)}
+                      >
+                        Guardar
+                      </button>
+                    ) : (
+                      <>
+                        <button
+                          className="btn-uvas"
+                          onClick={() => handleEditar(c.id)}
+                        >
+                          Editar
+                        </button>
+                        <button
+                          className="btn-uvas"
+                          onClick={() => handleEliminar(c.id)}
+                        >
+                          Eliminar
+                        </button>
+                      </>
+                    )}
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
+

@@ -1,11 +1,14 @@
 import React from "react";
-import { Poppins } from "next/font/google";
 import "./globals.css";
 import "./custom.css";
+import FooterNav from "./FooterNav";
+import { Macondo } from "next/font/google";
+import HeaderTitle from "./HeaderTitle";
 
-const poppins = Poppins({
+
+const macondo = Macondo({
   subsets: ["latin"],
-  weight: ["400", "700"], // podés elegir variantes
+  weight: "400",
 });
 
 export const metadata = {
@@ -16,12 +19,21 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
-      <body className={poppins.className}>
+      <body className={macondo.className}>
         <div className="page">
-          <header className="header-uvas">UVAS</header>
-          {children}
+          {/* Banner superior */}
+          <header className="header-uvas">
+              <HeaderTitle />
+          </header>
+
+          {/* Contenido específico de cada página */}
+          <main>{children}</main>
+
+          {/* Banner inferior con navegación */}
+          <FooterNav />
         </div>
       </body>
     </html>
   );
 }
+

@@ -1,11 +1,55 @@
 /* =========================================================
-   UTILIDADES BASE (reset, helpers neutrales)
+   TIPOGRAFÍA BASE
    ========================================================= */
-/* Aquí irían resets globales o utilidades mínimas comunes
-   Ejemplo: box-sizing, tipografía base, etc. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Macondo&display=swap');
+
+:root {
+  --font-titles: 'Poppins', sans-serif;
+  --font-body: 'Macondo', cursive;
+
+  --uva-violeta: #31045c;
+  --uva-violeta-claro: #d1c4e9;
+  --uva-blanco: #ffffff;
+  --uva-gris: #7e6788;
+
+  /* Variables universales */
+  --color-primary: var(--uva-violeta);
+  --color-secondary: var(--uva-violeta-claro);
+  --color-light: #ffffff;
+  --color-muted: #7e6788;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--uva-violeta);
+  background-color: #fdf6ff; /* lavanda muy claro */
+}
+
+h1,.logo-uvas, .header-uvas {
+  font-family: var(--font-titles);
+}
+/* 👉 Estilos específicos de títulos */
+.tituloUva {
+  font-family: var(--font-body);
+  text-align: center;
+  margin-bottom: 20px;
+}
 
 /* =========================================================
-   UTILIDADES DE LAYOUT Y CENTRADO (universales)
+   UTILIDADES BASE
+   ========================================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.text-center { text-align: center; }
+
+/* =========================================================
+   UTILIDADES DE LAYOUT
    ========================================================= */
 .center-screen {
   display: flex;
@@ -18,15 +62,12 @@
   display: flex;
   flex-direction: column;
 }
-
 .stack-gap-sm > * + * { margin-top: 0.5rem; }
 .stack-gap-md > * + * { margin-top: 1rem; }
 .stack-gap-lg > * + * { margin-top: 1.5rem; }
 
-.text-center { text-align: center; }
-
 /* =========================================================
-   FORM ELEMENTS (inputs, formularios neutrales)
+   FORM ELEMENTS
    ========================================================= */
 .input {
   flex: 1;
@@ -37,187 +78,276 @@
 }
 .input:focus {
   outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(98, 0, 234, 0.3);
+}
+
+/* Inputs UVAS */
+.input-uvas {
+  border: 1px solid var(--uva-violeta);
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--uva-violeta);
+  background: var(--uva-blanco);
+}
+.input-uvas:focus {
+  outline: none;
   border-color: var(--uva-violeta);
-  box-shadow: 0 0 0 2px rgba(147, 51, 234, 0.3);
+  box-shadow: 0 0 0 2px rgba(49, 4, 92, 0.25);
 }
 
 /* =========================================================
-   IDENTIDAD UVAS (colores, logo, tipografía)
+   IDENTIDAD UVAS
    ========================================================= */
-
-:root {
-  --uva-violeta: #31045c;
-  --uva-verde: #0e7e2a;
-  --uva-blanco: #ffffff;
-  --uva-gris: #7e6788;
-}
-
-.logo-uvas-hero {
-  font-family: 'Poppins', 'Nunito', sans-serif;
-  font-weight: 700;
-  color: var(--uva-violeta);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 3rem; /* mucho más grande */
-}
-
 .logo-uvas {
-  font-family: 'Poppins', 'Nunito', sans-serif;
   font-weight: 700;
   color: var(--uva-violeta);
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-
-/* =========================================================
-   COMPONENTES (botones, tarjetas, contenedores)
-   ========================================================= */
-
-/* Fondo general suave */
-.page {
-  background-color: #fdf6ff; /* lavanda muy claro */
-  min-height: 100vh;
-  padding: 2rem;
+.logo-uvas-hero {
+  letter-spacing: 3px;
+  font-size: 3rem;
 }
 
-/* Encabezado uva */
-.header-uvas {
-  background-color: #d1c4e9; /* violeta pastel */
-  color: #ffffff;
-  padding: 1rem 2rem;
-  text-align: center;
+/* =========================================================
+   COMPONENTES UNIVERSALES
+   ========================================================= */
+/* Texto de bienvenida en Home */
+.welcome-text {
   font-size: 2rem;
+  font-weight: 600;
+  color: var(--uva-violeta);
+  font-family: var(--font-body);
+  margin: 1rem 0;
+  text-align: center;
+}
+
+/* Banner superior */
+.header-uvas {
+  background-color: var(--uva-violeta-claro);
+  color: #fdf6ff; /* mismo color que el cuerpo */
+  padding: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-family: 'Poppins', 'Nunito', sans-serif;
 }
 
-/* Botón base pastel */
+/* Botones suspendidos (cuerpo) */
 .btn {
   display: inline-block;
-  border: none;
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
-  font-size: 0.95rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: background-color 0.2s, transform 0.1s;
+  background-color: #ffffff;
+  color: var(--uva-violeta);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 .btn:active {
   transform: scale(0.97);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Botones UVAS pastel */
-.btn-success {
-  background-color: #a8e6cf;
-  color: #2e7d32;
-}
-.btn-success:hover {
-  background-color: #81d4a3;
-}
-
-.btn-secondary {
-  background-color: #ff8b94;
-  color: #b71c1c;
-}
-.btn-secondary:hover {
-  background-color: #ff6f61;
-}
-
-.btn-volver {
-  background-color: #d1c4e9;
-  color: #4a148c;
-}
-.btn-volver:hover {
-  background-color: #b39ddb;
-}
-
-/* Tarjetas con borde pastel */
-.card {
+/* Botones principales UVAS */
+.btn-uvas {
   background-color: #ffffff;
-  border: 1px solid #e0d7ec; /* borde violeta claro */
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  margin-bottom: 1rem;
+  color: var(--uva-violeta);
+  border: 1px solid var(--uva-violeta);
+  border-radius: 10px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+.btn-uvas:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2) !important;
+}
+.btn-uvas:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.12) !important;
 }
 
-/* Tabla UVAS con estética pastel */
-.table-uvas th {
+/* =========================================================
+   FOOTER DE NAVEGACIÓN
+   ========================================================= */
+.footer-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 64px;
+  background-color: var(--uva-violeta-claro);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 1000;
+}
+
+.footer-nav .btn-nav {
+  background-color: #ffffff;
+  color: var(--uva-violeta);
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+.footer-nav .btn-nav:hover {
   background-color: #f3e5f5;
-  color: #4a148c;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.16);
+}
+.footer-nav .btn-nav:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.12);
+}
+
+/* =========================================================
+   TABLAS Y ACCIONES
+   ========================================================= */
+.tabla-clientes,
+.tabla-pedidos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.tabla-clientes th,
+.tabla-clientes td,
+.tabla-pedidos th,
+.tabla-pedidos td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: center;
+}
+.tabla-clientes th,
+.tabla-pedidos th {
+  background-color: #f5f0fa;
   font-weight: 600;
 }
-.table-uvas td {
-  background-color: #fafafa;
-  color: #333;
+
+.acciones {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
 }
-.table-uvas th, .table-uvas td {
-  border: 1px solid #e0d7ec;
-  padding: 0.5rem 0.75rem;
+
+/* =========================================================
+   MODAL (CATÁLOGO)
+   ========================================================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(49, 4, 92, 0.4); /* violeta translúcido */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: var(--uva-blanco);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  max-width: 720px;
+  width: 92%;
+  border: 1px solid var(--uva-violeta-claro); /* bordes finos */
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.catalogo-lista {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  max-height: 60vh;
+  overflow: auto;
+}
+
+.catalogo-item {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid #e6e0ef;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.catalogo-imagen {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.catalogo-info p {
+  margin: 0.15rem 0;
+  color: var(--uva-gris);
   font-size: 0.95rem;
 }
 
-/* Pantallas pequeñas (celulares) */
-@media (max-width: 600px) {
-  .table-uvas th, .table-uvas td {
-    padding: 0.2rem 0.4rem;
-    font-size: 0.85rem;
-  }
-
-  .btn {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.85rem;
-  }
-
-  h1 {
-    font-size: 1.4rem;
-  }
-
-  .table-uvas {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-}
-.logo-title-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px; /* mismo ancho que los botones */
-}
-
-.welcome-text {
-  font-size: 1.5rem;       /* más grande */
-  color: var(--uva-violeta); /* color UVAS */
-  font-weight: 600;
-  margin-top: 1rem;
-}
-/* === Ajustes Home UVAS === */
-.home-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 220px; /* ancho uniforme para logo+título, bienvenida y botones */
-  margin: 0 auto;
-}
-
-.logo-title-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.welcome-text {
-  font-size: 1.5rem;
+.catalogo-info strong {
+  font-family: var(--font-titles);
   color: var(--uva-violeta);
   font-weight: 600;
-  margin-top: 1rem;
 }
-/* === Botones Home UVAS === */
-.home-block .btn {
-  width: 220px;       /* mismo ancho que logo+título */
-  text-align: center; /* centramos el texto dentro */
+
+/* =========================================================
+   SELECTOR DE PRODUCTO EN FILA NUEVA
+   ========================================================= */
+.producto-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* =========================================================
+   CLIENTE + NOTAS
+   ========================================================= */
+.cliente-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  align-items: start; /* alinear por borde superior */
+}
+
+/* =========================================================
+   PAGE WRAPPER
+   ========================================================= */
+.page {
+  background-color: #fdf6ff;
+  min-height: 100vh;
+  padding: 2rem;
+  padding-bottom: 100px; /* espacio para el footer fijo */
 }

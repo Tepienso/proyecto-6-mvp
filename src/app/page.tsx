@@ -7,7 +7,7 @@ export default function Home() {
       {/* Contenedor con ancho uniforme */}
       <div className="home-block stack stack-gap-md">
         {/* Logo + Título pegados */}
-        <div className="logo-title-block">
+        <div className="logo-title-block" style={{ minWidth: "220px" }}>
           <Image
             src="/assets/uvas-logo.png"
             alt="Logo UVAS"
@@ -25,17 +25,21 @@ export default function Home() {
         </div>
 
         {/* Bienvenida destacada */}
-        <p className="welcome-text">¡Bienvenida, Cynthia! 👋</p>
+        <p className="welcome-text">¡Bienvenida, Cynthia!</p>
 
-        {/* Botones uniformes pastel */}
-        <Link href="/pedidos" className="btn btn-volver">
-          Registrar pedido 🛒
+        {/* Botones principales UVAS */}
+        <Link href="/pedidos" className="btn-uvas">
+          Registrar pedido
         </Link>
-        <Link href="/clientes" className="btn btn-volver">
-          Ver clientes 👤
+        <Link href="/clientes" className="btn-uvas">
+          Ver clientes
         </Link>
-        <button className="btn btn-volver">Catálogo 💄</button>
-        <button className="btn btn-volver">Pagos pendientes 💵</button>
+        <Link href="/estados" className="btn-uvas">
+          Estados de cuenta
+        </Link>
+        <Link href="/herramientas" className="btn-uvas">
+          Herramientas
+        </Link>
       </div>
     </div>
   );
