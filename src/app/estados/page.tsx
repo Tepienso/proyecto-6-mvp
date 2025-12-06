@@ -4,7 +4,7 @@ export default function EstadosPage() {
   return (
     <div className="page center-screen text-center">
       <div className="estados-block stack stack-gap-md">
-        <h1 className="titulo-seccion">Estados de cuenta 📑</h1>
+        <h1 className="titulo-seccion">Estados de cuenta </h1>
         <p className="welcome-text">
           Elegí qué tipo de estado de cuenta querés consultar:
         </p>

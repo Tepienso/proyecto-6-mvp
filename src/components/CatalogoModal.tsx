@@ -10,6 +10,7 @@ type Producto = {
   precioPublico: number;
   imagen?: string;
   descripcion?: string;
+  activo?: boolean;
 };
 
 type Props = {
@@ -19,11 +20,18 @@ type Props = {
 
 export default function CatalogoModal({ onClose, onSelect }: Props) {
   const [productos, setProductos] = useState<Producto[]>([]);
+  const [filtro, setFiltro] = useState("");
 
   useEffect(() => {
-    // Carga inicial desde el JSON
     setProductos(catalogo as Producto[]);
   }, []);
+
+  const productosFiltrados = productos.filter(
+    (p) =>
+      p.activo !== false &&
+      (p.nombre.toLowerCase().includes(filtro.toLowerCase()) ||
+        p.codigo.toLowerCase().includes(filtro.toLowerCase()))
+  );
 
   return (
     <div className="modal-overlay">
@@ -33,28 +41,43 @@ export default function CatalogoModal({ onClose, onSelect }: Props) {
           <button className="btn-uvas" onClick={onClose}>Cancelar</button>
         </div>
 
-        <div className="catalogo-lista stack stack-gap-md">
-          {productos.map((p) => (
-            <div key={p.codigo} className="catalogo-item stack stack-gap-sm">
-              {p.imagen && (
-                <img
-                  src={p.imagen}
-                  alt={p.nombre}
-                  className="catalogo-imagen"
-                />
-              )}
-              <div className="catalogo-info">
-                <strong>{p.nombre}</strong>
-                <p>Código: {p.codigo}</p>
-                <p>Distribuidor: ${p.precioDistribuidor}</p>
-                <p>Público: ${p.precioPublico}</p>
-                {p.descripcion && <small>{p.descripcion}</small>}
-              </div>
-              <button className="btn-uvas" onClick={() => onSelect(p)}>
-                Seleccionar
-              </button>
-            </div>
-          ))}
+        <div className="buscador">
+          <input
+            type="text"
+            placeholder="Buscar por nombre o código..."
+            value={filtro}
+            onChange={(e) => setFiltro(e.target.value)}
+            className="input-uvas"
+          />
+        </div>
+
+        <div className="catalogo-scroll">
+          <table className="tabla-catalogo">
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Público</th>
+                <th className="descripcion">Descripción</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {productosFiltrados.map((p) => (
+                <tr key={p.codigo}>
+                  <td>{p.codigo}</td>
+                  <td>{p.nombre}</td>
+                  <td>${p.precioPublico}</td>
+                  <td className="descripcion">{p.descripcion ?? "—"}</td>
+                  <td className="boton">
+                    <button className="btn-uvas" onClick={() => onSelect(p)}>
+                      Seleccionar
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

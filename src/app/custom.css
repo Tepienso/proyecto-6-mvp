@@ -351,3 +351,84 @@ h1,.logo-uvas, .header-uvas {
   padding: 2rem;
   padding-bottom: 100px; /* espacio para el footer fijo */
 }
+/* === Estilos específicos para CatalogoModal === */
+
+.tabla-catalogo {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-catalogo th,
+.tabla-catalogo td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla-catalogo td.descripcion {
+  width: 40%;           /* más espacio para el texto descriptivo */
+  white-space: normal;  /* permite saltos de línea */
+}
+
+.tabla-catalogo td.boton {
+  width: 120px;         /* columna fija para el botón */
+  text-align: center;
+}
+
+.btn-uvas {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+/* Scroll interno del catálogo */
+.catalogo-scroll {
+  max-height: 400px;   /* ajustá según tu diseño */
+  overflow-y: auto;
+  margin-top: 1rem;
+}
+
+/* Buscador */
+.buscador {
+  margin-bottom: 1rem;
+}
+
+.input-uvas {
+  width: 100%;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.tabla-ordenada {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.tabla-ordenada th,
+.tabla-ordenada td {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.tabla-ordenada th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.estado-realizado {
+  color: #137b13; /* verde legible */
+  font-weight: 600;
+}
+
+.estado-pendiente {
+  color: #b30000; /* rojo legible */
+  font-weight: 600;
+}
+
+/* Opcional: contenedor para limitar ancho máximo y centrar en pantallas grandes */
+.tabla-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}

@@ -14,3 +14,17 @@ export async function fetchProfile() {
     throw new Error(err.message || "Error desconocido al obtener perfil");
   }
 }
+
+export async function fetchCatalogo() {
+  try {
+    const res = await fetch("/api/catalogo");
+
+    if (!res.ok) {
+      throw new Error(`Error ${res.status}: ${res.statusText}`);
+    }
+
+    return res.json();
+  } catch (err: any) {
+    throw new Error(err.message || "Error desconocido al obtener catálogo");
+  }
+}

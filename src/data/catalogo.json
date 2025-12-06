@@ -4,15 +4,288 @@
     "nombre": "FITOBIOLOGICA X 50 ML",
     "precioDistribuidor": 10300,
     "precioPublico": 14000,
-    "imagen": "/images/fitobiologica50.jpg",
-    "descripcion": "Suaviza y nutre la piel con extractos naturales."
+    "imagen": null,
+    "descripcion": "Suaviza y nutre la piel con extractos naturales.",
+    "activo": true
   },
   {
     "codigo": "MIA50",
     "nombre": "MIA NUTRITIVA E HIDRATA 50 ML",
     "precioDistribuidor": 10500,
     "precioPublico": 14500,
-    "imagen": "/images/mia50.jpg",
-    "descripcion": "Crema nutritiva e hidratante para uso diario."
+    "imagen": null,
+    "descripcion": "Crema nutritiva e hidratante para uso diario.",
+    "activo": true
+  },
+  {
+    "codigo": "PARP30",
+    "nombre": "PARPADOS X 30 ML",
+    "precioDistribuidor": 9200,
+    "precioPublico": 13000,
+    "imagen": null,
+    "descripcion": "Tratamiento delicado para la zona de párpados.",
+    "activo": true
+  },
+  {
+    "codigo": "SERUM30",
+    "nombre": "SERUM COLAGENO+OLIVO 30ML",
+    "precioDistribuidor": 12200,
+    "precioPublico": 16500,
+    "imagen": null,
+    "descripcion": "Serum con colágeno y extracto de olivo.",
+    "activo": true
+  },
+  {
+    "codigo": "HIALU30",
+    "nombre": "GEL DE ACIDO HIALURONICO 30ML",
+    "precioDistribuidor": 9200,
+    "precioPublico": 11800,
+    "imagen": null,
+    "descripcion": "Gel hidratante con ácido hialurónico.",
+    "activo": true
+  },
+  {
+    "codigo": "CUERPO170",
+    "nombre": "CREMA CUERPO Y MANOS 170 ML",
+    "precioDistribuidor": 3300,
+    "precioPublico": 5800,
+    "imagen": null,
+    "descripcion": "Crema corporal y de manos para uso diario.",
+    "activo": true
+  },
+  {
+    "codigo": "HUMEC120",
+    "nombre": "CREMA HUMECTANTE DIA 120 ML",
+    "precioDistribuidor": 3500,
+    "precioPublico": 6000,
+    "imagen": null,
+    "descripcion": "Crema humectante de día.",
+    "activo": true
+  },
+  {
+    "codigo": "HUMEC50FS",
+    "nombre": "CREMA HUMECTANTE DIA X 50 ML F.S.",
+    "precioDistribuidor": 6400,
+    "precioPublico": 8700,
+    "imagen": null,
+    "descripcion": "Versión especial de crema humectante de día.",
+    "activo": true
+  },
+  {
+    "codigo": "NUTRI120",
+    "nombre": "CREMA NUTRI. ANTIA X 120 ML",
+    "precioDistribuidor": 3500,
+    "precioPublico": 6000,
+    "imagen": null,
+    "descripcion": "Crema nutritiva antiedad.",
+    "activo": true
+  },
+  {
+    "codigo": "NUTRI50",
+    "nombre": "CREMA NUTRIT ANTIA X 50 ML",
+    "precioDistribuidor": 6800,
+    "precioPublico": 9700,
+    "imagen": null,
+    "descripcion": "Crema nutritiva antiedad en formato pequeño.",
+    "activo": true
+  },
+  {
+    "codigo": "CUER200",
+    "nombre": "CREMA CUER/ MANOS 200 ML",
+    "precioDistribuidor": 4500,
+    "precioPublico": 6200,
+    "imagen": null,
+    "descripcion": "Crema corporal y manos formato 200 ml.",
+    "activo": true
+  },
+  {
+    "codigo": "AFIRMANTE",
+    "nombre": "CREMA AFIRMANTE CORPORAL",
+    "precioDistribuidor": 13000,
+    "precioPublico": 16800,
+    "imagen": null,
+    "descripcion": "Crema reafirmante para el cuerpo.",
+    "activo": true
+  },
+  {
+    "codigo": "EXTR_OLIVO",
+    "nombre": "EXTRACTO DE OLIVO",
+    "precioDistribuidor": 9300,
+    "precioPublico": 12600,
+    "imagen": null,
+    "descripcion": "Extracto concentrado de olivo.",
+    "activo": true
+  },
+  {
+    "codigo": "FRAG_DUR200",
+    "nombre": "FRAG C UVAS DURAZNO 200ML",
+    "precioDistribuidor": 5800,
+    "precioPublico": 7700,
+    "imagen": null,
+    "descripcion": "Fragancia UVAS Durazno 200 ml.",
+    "activo": true
+  },
+  {
+    "codigo": "FRAG_LOV200",
+    "nombre": "FRAG C UVAS LOVELY 200ML",
+    "precioDistribuidor": 5800,
+    "precioPublico": 7700,
+    "imagen": null,
+    "descripcion": "Fragancia UVAS Lovely 200 ml.",
+    "activo": true
+  },
+  {
+    "codigo": "FRAG_VAIN200",
+    "nombre": "FRAG C UVAS VAINILLA 200ML",
+    "precioDistribuidor": 5800,
+    "precioPublico": 7700,
+    "imagen": null,
+    "descripcion": "Fragancia UVAS Vainilla 200 ml.",
+    "activo": true
+  },
+  {
+    "codigo": "FRAG_TILO200",
+    "nombre": "FRAG C UVAS TILO 200ML",
+    "precioDistribuidor": 5800,
+    "precioPublico": 7700,
+    "imagen": null,
+    "descripcion": "Fragancia UVAS Tilo 200 ml.",
+    "activo": true
+  },
+  {
+    "codigo": "FRAG_COCO200",
+    "nombre": "FRAG C UVAS COCO 200ML",
+    "precioDistribuidor": 5800,
+    "precioPublico": 7700,
+    "imagen": null,
+    "descripcion": "Fragancia UVAS Coco 200 ml.",
+    "activo": true
+  },
+  {
+    "codigo": "FRAG_ROS200",
+    "nombre": "FRAG C UVAS ROSAS FRE 200ML",
+    "precioDistribuidor": 5800,
+    "precioPublico": 7700,
+    "imagen": null,
+    "descripcion": "Fragancia UVAS Rosas Frescas 200 ml.",
+    "activo": true
+  },
+  {
+    "codigo": "FRAG_JAZ200",
+    "nombre": "FRAG C UVAS JAZMIN 200ML",
+    "precioDistribuidor": 5800,
+    "precioPublico": 7700,
+    "imagen": null,
+    "descripcion": "Fragancia UVAS Jazmín 200 ml.",
+    "activo": true
+  },
+  {
+    "codigo": "FRAG_LG200",
+    "nombre": "FRAG C UVAS LEMON GRASS 200ML",
+    "precioDistribuidor": 5800,
+    "precioPublico": 7700,
+    "imagen": null,
+    "descripcion": "Fragancia UVAS Lemon Grass 200 ml.",
+    "activo": true
+  },
+  {
+    "codigo": "FRAG_LIMCHO200",
+    "nombre": "FRAG UVAS LIMO/CHOC 200ML",
+    "precioDistribuidor": 5800,
+    "precioPublico": 7700,
+    "imagen": null,
+    "descripcion": "Fragancia UVAS Limón/Chocolate 200 ml.",
+    "activo": true
+  },
+  {
+    "codigo": "EDT_ESP50",
+    "nombre": "EAU DE TOIL UVAS ESPECIADO 50 ML",
+    "precioDistribuidor": 16300,
+    "precioPublico": 20800,
+    "imagen": null,
+    "descripcion": "Eau de Toilette UVAS Especiado 50 ml.",
+    "activo": true
+  },
+  {
+    "codigo": "EDT_ARO50",
+    "nombre": "EAU DE TOIL UVAS AROMATICO 50 ML",
+    "precioDistribuidor": 16300,
+    "precioPublico": 20800,
+    "imagen": null,
+    "descripcion": "Eau de Toilette UVAS Aromático 50 ml.",
+    "activo": true
+  },
+  {
+    "codigo": "EDT_FRU50",
+    "nombre": "EAU DE TOIL UVAS FRUTADO 50 ML",
+    "precioDistribuidor": 16300,
+    "precioPublico": 20800,
+    "imagen": null,
+    "descripcion": "Eau de Toilette UVAS Frutado 50 ml.",
+    "activo": true
+  },
+  {
+    "codigo": "EDT_FLO100",
+    "nombre": "EAU DE TOIL UVAS FLORAL 100 ML",
+    "precioDistribuidor": 16300,
+    "precioPublico": 20800,
+    "imagen": null,
+    "descripcion": "Eau de Toilette UVAS Floral 100 ml.",
+    "activo": true
+  },
+  {
+    "codigo": "EDT_INT100",
+    "nombre": "EAU TOIL INTENSE MUJER 100 ML",
+    "precioDistribuidor": 16300,
+    "precioPublico": 20800,
+    "imagen": null,
+    "descripcion": "Eau de Toilette Intense Mujer 100 ml.",
+    "activo": true
+  },
+  {
+    "codigo": "EDT_SPORT100",
+    "nombre": "EAU TOIL SPORT HOMBRE 100 ML",
+    "precioDistribuidor": 21100,
+    "precioPublico": 25000,
+    "imagen": null,
+    "descripcion": "Eau de Toilette Sport Hombre 100 ml.",
+    "activo": true
+  },
+  {
+    "codigo": "JAB_MALB250",
+    "nombre": "JABON MALBEC 250 ML HIDRA",
+    "precioDistribuidor": 4500,
+    "precioPublico": 5800,
+    "imagen": null,
+    "descripcion": "Jabón líquido Malbec 250 ml hidratante.",
+    "activo": true
+  },
+  {
+    "codigo": "LECHE140",
+    "nombre": "LECHE DE LIMPIEZA 140 ML",
+    "precioDistribuidor": 3300,
+    "precioPublico": 5800,
+    "imagen": null,
+    "descripcion": "Leche de limpieza facial 140 ml.",
+    "activo": true
+  },
+  {
+    "codigo": "TONICA200VA",
+    "nombre": "TONICA C/ EXTRA 200 ML VA",
+    "precioDistribuidor": 8150,
+    "precioPublico": 10600,
+    "imagen": null,
+    "descripcion": "Tónica con extractos 200 ml (variante VA).",
+    "activo": true
+  },
+  {
+    "codigo": "BARRO144",
+    "nombre": "UVAS BARRO FACIAL X 144 ML",
+    "precioDistribuidor": 8300,
+    "precioPublico": 11700,
+    "imagen": null,
+    "descripcion": "Barro facial UVAS 144 ml.",
+    "activo": true
   }
 ]
+
