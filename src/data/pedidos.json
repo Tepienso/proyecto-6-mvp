@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "cliente": "Ejemplo SRL",
+    "items": [
+      { "articulo": "Crema hidratante", "cantidad": 2, "precio": 500 },
+      { "articulo": "Perfume floral", "cantidad": 1, "precio": 2000 }
+    ],
+    "total": 3000,
+    "cerrado": false,
+    "fechaRegistro": "07-12-2025",
+    "ultimaModificacion": "08-12-2025"
+  },
+  {
+    "id": 2,
+    "cliente": "Cliente Cerrado",
+    "items": [
+      { "articulo": "Labial rojo", "cantidad": 3, "precio": 400 }
+    ],
+    "total": 1200,
+    "cerrado": true,
+    "fechaRegistro": "06-12-2025",
+    "ultimaModificacion": "06-12-2025"
+  },
+  {
+    "id": 3,
+    "cliente": "María López",
+    "items": [
+      { "articulo": "Crema anti-age", "cantidad": 1, "precio": 1500 },
+      { "articulo": "Shampoo", "cantidad": 2, "precio": 700 }
+    ],
+    "total": 2900,
+    "cerrado": false,
+    "fechaRegistro": "05-12-2025",
+    "ultimaModificacion": "07-12-2025"
+  },
+  {
+    "id": 4,
+    "cliente": "Farmacia Central",
+    "items": [
+      { "articulo": "Alcohol en gel", "cantidad": 10, "precio": 300 },
+      { "articulo": "Guantes descartables", "cantidad": 50, "precio": 50 }
+    ],
+    "total": 5500,
+    "cerrado": false,
+    "fechaRegistro": "04-12-2025",
+    "ultimaModificacion": "08-12-2025"
+  },
+  {
+    "id": 5,
+    "cliente": "Distribuidora Norte",
+    "items": [
+      { "articulo": "Jabón líquido", "cantidad": 20, "precio": 250 },
+      { "articulo": "Toallas húmedas", "cantidad": 15, "precio": 400 }
+    ],
+    "total": 11500,
+    "cerrado": true,
+    "fechaRegistro": "03-12-2025",
+    "ultimaModificacion": "05-12-2025"
+  },
+  {
+    "id": 6,
+    "cliente": "Carlos Pérez",
+    "items": [
+      { "articulo": "Desodorante", "cantidad": 3, "precio": 600 },
+      { "articulo": "Crema corporal", "cantidad": 1, "precio": 1200 }
+    ],
+    "total": 3000,
+    "cerrado": false,
+    "fechaRegistro": "02-12-2025",
+    "ultimaModificacion": "08-12-2025"
+  },
+  {
+    "id": 7,
+    "cliente": "Supermercado La Esquina",
+    "items": [
+      { "articulo": "Shampoo familiar", "cantidad": 12, "precio": 450 },
+      { "articulo": "Acondicionador", "cantidad": 12, "precio": 500 }
+    ],
+    "total": 11400,
+    "cerrado": false,
+    "fechaRegistro": "01-12-2025",
+    "ultimaModificacion": "07-12-2025"
+  }
+]
+

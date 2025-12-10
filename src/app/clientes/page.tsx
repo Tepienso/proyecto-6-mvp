@@ -123,7 +123,6 @@ export default function ClientesPage() {
   return (
     <div className="page center-screen text-center">
       <div className="home-block stack stack-gap-md">
-        {/* Título eliminado: ahora se muestra en el banner superior */}
         <table className="tabla-clientes">
           <thead>
             <tr>
@@ -204,4 +203,3 @@ export default function ClientesPage() {
     </div>
   );
 }
-

@@ -28,7 +28,7 @@ export default function Home() {
         <p className="welcome-text">¡Bienvenida, Cynthia!</p>
 
         {/* Botones principales UVAS */}
-        <Link href="/pedidos" className="btn-uvas">
+        <Link href="/registro_pedido" className="btn-uvas">
           Registrar pedido
         </Link>
         <Link href="/clientes" className="btn-uvas">

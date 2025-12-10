@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "cliente": "Alguno SRL",
+    "items": [
+      { "articulo": "Crema hidratante", "cantidad": 2, "precio": 500 },
+      { "articulo": "Perfume floral", "cantidad": 1, "precio": 2000 }
+    ],
+    "total": 3000,
+    "cerrado": true,
+    "fechaRegistro": "04-12-2025",
+    "ultimaModificacion": "08-12-2025"
+  },
+  {
+    "id": 2,
+    "cliente": "Quien Sea",
+    "items": [
+      { "articulo": "Labial rojo", "cantidad": 3, "precio": 400 }
+    ],
+    "total": 1200,
+    "cerrado": true,
+    "fechaRegistro": "06-12-2025"
+    "ultimaModificacion":"08-12-2025"
+  },
+  {
+    "id": 3,
+    "cliente": "María López",
+    "items": [
+      { "articulo": "Crema anti-age", "cantidad": 1, "precio": 1500 },
+      { "articulo": "Shampoo", "cantidad": 2, "precio": 700 }
+    ],
+    "total": 2900,
+    "cerrado": true,
+    "fechaRegistro": "05-12-2025"
+    "ultimaModificacion":"08-12-2025"
+  }
+]

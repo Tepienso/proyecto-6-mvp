@@ -9,8 +9,11 @@ export default function HeaderTitle() {
     "/": "UVAS",
     "/clientes": "Clientes",
     "/pedidos": "Pedidos",
+    "/registro_pedido": "Registro de pedido",
+    "/corregir-pedido": "Editar pedido",
     "/estados": "Estados de cuenta",
     "/herramientas": "Herramientas",
+    "/editando": "Pedidos de: ",
     "/ejemplo": "Ejemplo ",
   };
 
