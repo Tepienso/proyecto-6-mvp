@@ -1,6 +1,3 @@
-import EditandoWrapper from "./EditandoWrapper";
+import EditandoPage from "./page.client";
 
-export default function Page() {
-  return <EditandoWrapper />;
-}
-
+export default EditandoPage;
