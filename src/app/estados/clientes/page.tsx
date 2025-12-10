@@ -1,68 +1,41 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
-import pedidos from "@/data/pedidos.json";       // ✅ Importamos los pedidos reales
-import { Pedido } from "@/types/pedidos";       // ✅ Importamos el tipo Pedido
+import React, { useState } from "react";
+import pedidos from "@/data/pedidos.json";
+import { PedidoJson } from "@/types/pedidos";
 
 export default function EstadoClientesPage() {
-  // Usamos directamente los pedidos importados
-  const [clientes] = useState<Pedido[]>(pedidos);
+  // Usamos directamente los pedidos importados desde pedidos.json
+  const [clientes] = useState<PedidoJson[]>(pedidos);
 
   return (
     <div className="page center-screen stack stack-gap-md">
-      <h1 className="titulo-seccion text-center">Estado de cuenta de clientes</h1>
+      <h2 className="tituloUva">Estado de cuenta de clientes</h2>
 
-      <div className="tabla-container">
-        <table className="tabla-ordenada">
-          <thead>
-            <tr>
-              <th>Cliente</th>
-              <th>Código</th>
-              <th>Artículo</th>
-              <th>Cantidad</th>
-              <th>Precio Público ($)</th>
-              <th>Pedido al proveedor</th>
-              <th>Entregado</th>
-              <th>Pagado</th>
+      <table className="tabla-pedidos" width="100%">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Cliente</th>
+            <th>Total</th>
+            <th>Cerrado</th>
+            <th>Fecha registro</th>
+            <th>Última modificación</th>
+          </tr>
+        </thead>
+        <tbody>
+          {clientes.map((c) => (
+            <tr key={c.id}>
+              <td>{c.id}</td>
+              <td>{c.cliente}</td>
+              <td>${c.total}</td>
+              <td>{c.cerrado ? "Sí" : "No"}</td>
+              <td>{c.fechaRegistro}</td>
+              <td>{c.ultimaModificacion}</td>
             </tr>
-          </thead>
-          <tbody>
-            {clientes.map((p) => (
-              <tr key={p.id}>
-                <td>{p.clienteNombre}</td>
-                <td>{p.codigo}</td>
-                <td>{p.articulo}</td>
-                <td>{p.cantidad}</td>
-                <td>{p.precioPublico}</td>
-                <td
-                  className={
-                    p.pedidoProveedor === "realizado"
-                      ? "estado-realizado"
-                      : "estado-pendiente"
-                  }
-                >
-                  {p.pedidoProveedor === "realizado" ? "Realizado" : "Pendiente"}
-                </td>
-                <td className={p.entregado ? "estado-realizado" : "estado-pendiente"}>
-                  {p.entregado ? "✅" : "❌"}
-                </td>
-                <td className={p.pagado ? "estado-realizado" : "estado-pendiente"}>
-                  {p.pagado ? "✅" : "❌"}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      <Link
-        href="/estados"
-        className="btn btn-volver"
-        style={{ marginTop: "1.5rem" }}
-      >
-        ← Volver a Estados
-      </Link>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }

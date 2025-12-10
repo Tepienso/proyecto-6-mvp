@@ -1,26 +1,54 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import pedidos from "@/data/pedidos.json";
+import { PedidoJson } from "@/types/pedidos";
 
 export default function RegistroPedidoPage() {
+  // Usamos directamente los pedidos importados desde pedidos.json
+  const [listaPedidos] = useState<PedidoJson[]>(pedidos);
+
   return (
-    <div className="page center-screen text-center">
-      {/* Botones principales en columna */}
-      <div className="button-group-vertical">
-        <button 
-          className="granbtn-uvas" 
-          onClick={() => window.location.href = "/pedidos"}
+    <div className="page center-screen stack stack-gap-md">
+      <h2 className="tituloUva">Registrar pedidos</h2>
+
+      <table className="tabla-pedidos" width="100%">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Cliente</th>
+            <th>Total</th>
+            <th>Cerrado</th>
+            <th>Fecha registro</th>
+            <th>Última modificación</th>
+          </tr>
+        </thead>
+        <tbody>
+          {listaPedidos.map((p) => (
+            <tr key={p.id}>
+              <td>{p.id}</td>
+              <td>{p.cliente}</td>
+              <td>${p.total}</td>
+              <td>{p.cerrado ? "Sí" : "No"}</td>
+              <td>{p.fechaRegistro}</td>
+              <td>{p.ultimaModificacion}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      {/* Botón de acción para registrar un nuevo pedido */}
+      <div className="acciones text-center">
+        <button
+          className="btn-uvas"
+          onClick={() => {
+            console.log("Registrar nuevo pedido (pendiente de implementación)");
+          }}
         >
           Nuevo pedido
-        </button>
-
-        <button 
-          className="granbtn-uvas" 
-          onClick={() => window.location.href = "/corregir-pedido"}
-        >
-          Corregir pedido
         </button>
       </div>
     </div>
   );
 }
+
